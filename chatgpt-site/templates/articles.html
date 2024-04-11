@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ChatGPT Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+  <body>
+
+    <!-- header -->
+    <header>
+      <nav class = "navbar">
+        <div class = "container">
+          <a href = "/index" class = "navbar-brand">ChatGPT Site</a>
+          <div class = "navbar-nav">
+            <a href = "/articles">Посты</a>
+            <a href = "/create_article">Создать пост</a>
+          </div>
+        </div>
+      </nav>
+      <div class = "banner">
+        <div class = "container">
+          <h1 class = "banner-title">
+            Chat<span>GPT</span> Site
+          </h1>
+          <form>
+            <input type = "text" class = "search-input" placeholder=" . . .">
+            <button type = "submit" class = "search-btn">
+              <i class = "fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- blog -->
+    <section class = "blog" id = "blog">
+      <div class = "container">
+        <div class = "title">
+          <h2>Последнии новости</h2>
+          <p>recent blogs about art & design</p>
+        </div>
+        <div class = "blog-content">
+          <!-- item -->
+          {% block body %}
+          {% for el in articles %}
+          <div class = "blog-item">
+            <div class = "blog-img">
+              <img src = "images/blog-p-1.jpg" alt = "">
+              <span><i class = "far fa-heart"></i></span>
+            </div>
+            <div class = "blog-text">
+              <span>{{ el.author_name }}</span>
+              <h2>{{ el.title }}</h2>
+              <p>{{ el.text }}</p>
+              <a href = "#">Просто кнопка</a>
+            </div>
+          </div>
+          {% endfor %}
+          {% endblock %}
+          <!-- end of item -->
+        </div>
+      </div>
+    </section>
+    <!-- end of blog -->
+
+    <!-- footer -->
+    <footer>
+      <span>🍾ChatGPT Site</span>
+    </footer>
+    <!-- end of footer -->
+    
+    
+  </body>
+</html>

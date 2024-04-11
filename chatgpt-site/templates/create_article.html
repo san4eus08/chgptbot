@@ -14,30 +14,28 @@
 <div class="container">
     <div class=" row justify-content-center">
         <div class="col-sm-6 mt-4">
-            <h2>Регистрация</h2>
-            <form action="/register" method="POST">
+            <h2>Создание статьи</h2>
+            <form action="/create_article" method="POST">
                 <div class="form-group">
-                <label for="name">Имя:</label>
-                <input type="text" class="form-control" id="name" placeholder="Имя" name="name">
-                </div>
-                
-                <div class="form-group">
-                <label for="email">Почта:</label>
-                <input type="email" class="form-control" id="email" placeholder="Почта" name="email">
+                <label for="author_name">Имя автора:</label>
+                <input type="text" class="form-control" id="author_name" placeholder="Введите текст" name="author_name">
                 </div>
 
                 <div class="form-group">
-                <label for="pwd">Пароль:</label>
-                <input type="password" class="form-control" id="pwd" placeholder="Пароль" name="password">
+                <label for="title">Название статьи</label>
+                <input type="text" class="form-control" id="title" placeholder="Введите текст" name="title">
                 </div>
 
-                <button type="submit" class="btn btn-dark">Зарегистрироваться</button>
-                <a href="/login" class="btn btn-primary">Войти</a>
-                <a href="/create_article" class="btn btn-primary">Создать статью</a>
+                <div class="form-group">
+                <label for="text">Пароль:</label>
+                <input type="text" class="form-control" id="text" placeholder="Введите текст" name="text">
+                </div>
+
+                <button type="submit" class="btn btn-dark">Создать статью</button>
             </form>
         </div>
     </div>
-  
+
 </div>
 
 </body>
