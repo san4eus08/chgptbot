@@ -16,7 +16,7 @@ model_id = 'gpt-3.5-turbo'
 
 
 def audio_to_text(dest_name: str):
-    r = sr.Recognizer()\
+    r = sr.Recognizer()
     message = sr.AudioFile(dest_name)
     with message as source:
         audio = r.record(source)
